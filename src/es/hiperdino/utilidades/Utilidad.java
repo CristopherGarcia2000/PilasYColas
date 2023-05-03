@@ -10,4 +10,11 @@ public class Utilidad {
         int productoAleatorio = random.nextInt(PRODUCTOS.length);
         return PRODUCTOS[productoAleatorio];
     }
+    public static String nombreRandom(){
+        final  String [] NOMBRES = {"Manolo","Paco","Patricia","Ana","Emilio",
+                "Pepe","Sara","Pacheco","Laura","Pablo","Lucas","Leonardo"};
+        Random random = new Random();
+        int nombreAleatorio = random.nextInt(NOMBRES.length);
+        return NOMBRES[nombreAleatorio];
+    }
 }
