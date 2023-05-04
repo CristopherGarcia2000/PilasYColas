@@ -4,12 +4,22 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Cajero {
-    private int numCaja=1;
+    private final int NUMCAJA=1;
     private boolean cajaAbierta = false;
     private Queue<String> filaClientes = new LinkedList<>();
 
     public boolean getCajaAbierta() {
         return cajaAbierta;
+    }
+    public boolean isNull (){
+       if(filaClientes.isEmpty()){
+           return true;
+       }else{
+           return false;
+       }
+    }
+    public void atenderCliente(){
+        System.out.println(filaClientes.poll());
     }
 
     public void abrirCaja(){
@@ -38,7 +48,7 @@ public class Cajero {
     public String toString() {
         String msg;
         msg = "----------------------------—=== CLIENTES ===—-------------------------\n" +
-                "Número de Caja: " + numCaja + " \n" +
+                "Número de Caja: " + NUMCAJA + " \n" +
                 "Total de Clientes: "+ filaClientes.size() + "\n"+
                 "Cola de Clientes : " + filaClientes + "\n"+
                 "=========================================================================";
