@@ -13,6 +13,10 @@ public class Cliente {
         this.nombre = Utilidad.nombreRandom();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public void agregarProducto(){
         this.cestaCompra.push(Utilidad.randomProduct());
     }
@@ -20,6 +24,17 @@ public class Cliente {
 
     public void mostrarCesta(){
         System.out.println(cestaCompra);
+    }
+
+    @Override
+    public String toString() {
+        String msg;
+        msg = "----------------------------—=== CLIENTES ===—-------------------------\n" +
+                "Nombre: " + nombre + " \n" +
+                "Total de productos: "+ cestaCompra.size() +"\n"+
+                "Lista de artículos: " + cestaCompra + "\n" +
+                "=========================================================================";
+        return msg;
     }
 
 }
